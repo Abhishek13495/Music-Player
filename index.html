@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Web Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</head>
+<body>
+    <div id="player-container">
+        <div id="visualizer-container">
+            <canvas id="visualizer"></canvas>
+        </div>
+        <div id="now-playing">
+            <img id="album-art" src="https://via.placeholder.com/100" alt="Album Art">
+            <div id="track-info">
+                <h2 id="track-title">No track selected</h2>
+                <p id="track-artist">Unknown Artist</p>
+            </div>
+        </div>
+        <div id="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+        <div id="time-info">
+            <span id="current-time">0:00</span>
+            <span id="total-time">0:00</span>
+        </div>
+        <div id="controls">
+            <button id="shuffle"><i class="fas fa-random"></i></button>
+            <button id="prev"><i class="fas fa-step-backward"></i></button>
+            <button id="play-pause"><i class="fas fa-play"></i></button>
+            <button id="next"><i class="fas fa-step-forward"></i></button>
+            <button id="repeat"><i class="fas fa-redo"></i></button>
+        </div>
+        <div id="volume-container">
+            <i class="fas fa-volume-up"></i>
+            <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+        </div>
+        <div id="playlist-container">
+            <h3>Playlist</h3>
+            <input type="text" id="search" placeholder="Search songs...">
+            <ul id="playlist"></ul>
+        </div>
+        <div id="add-song-form">
+            <input type="text" id="new-song-title" placeholder="Song Title">
+            <input type="text" id="new-song-artist" placeholder="Artist">
+            <input type="text" id="new-song-url" placeholder="Audio URL">
+            <button id="add-song">Add Song</button>
+        </div>
+    </div>
+    <audio id="audio-player"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
